@@ -1,0 +1,58 @@
+body {
+    overflow: hidden;
+    background-color: #101010;
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+}
+
+.item {
+    position: absolute;
+    top: 0px; left: 0px;
+    user-select: none;
+    z-index: 100;
+    transition: transform .15s, box-shadow .15s;
+}
+
+.item:hover {
+    /* the translate methode shouldn't be necessary here */
+    transform: scale(1.03);
+    box-shadow: #000 0 0 12px 5px;
+
+    transition: transform .15s, box-shadow .15s;
+}
+
+#controls-hint {
+    margin: 0;
+    z-index: 200;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#paste-hint {
+    width: 100vw;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    font-size: 80pt;
+    opacity: .1;
+}
+
+#bin {
+    position: absolute;
+    bottom: 45px; right: 45px;
+    width: 70px; height: 70px;
+    background-color: #b31d1d;
+    border-radius: 450px;
+    box-shadow: #000 0 0 12px 5px;
+    text-align: center;
+    transition: .15s;
+    transform: translate(50%, 50%);
+}
+
+#bin img {
+    width: 50px;
+    margin: 10px;
+}
