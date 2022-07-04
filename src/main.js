@@ -16,7 +16,7 @@ function applyControlsToImage(img) {
             img.style.left = event.pageX + relX + 'px';
             img.style.top = event.pageY + relY + 'px';
 
-            if (event.pageX > window.innerWidth - 50 && event.pageY > window.innerHeight - 50) {
+            if (event.pageX > window.innerWidth - 80 && event.pageY > window.innerHeight - 80) {
                 remove = true;
                 document.querySelector('#bin').style.width = '900px';
                 document.querySelector('#bin').style.height = '900px';
