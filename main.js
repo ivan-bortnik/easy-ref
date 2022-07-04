@@ -55,6 +55,15 @@ function applyControlsToImage(img) {
     
 }
 
+document.querySelector('#board-name').addEventListener('input', (event) => {
+    let newTitle = event.target.value;
+    if (newTitle != '') {
+        document.title = newTitle;
+    } else {
+        document.title = 'Board';
+    }
+});
+
 
 // NOT MY CODE
 // https://htmldom.dev/paste-an-image-from-the-clipboard/
