@@ -1,4 +1,8 @@
 function applyControlsToImage(img) {
+
+    document.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    });
     
     // Drag n drop
     img.onmousedown = function (event) {
