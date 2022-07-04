@@ -12,7 +12,6 @@ function applyControlsToImage(img) {
         let relY = img.getBoundingClientRect().y - event.pageY;
         
         function move(event) {
-            // TODO: The image should not be centered on the mouse when moved
             img.style.left = event.pageX + relX + 'px';
             img.style.top = event.pageY + relY + 'px';
 
@@ -57,6 +56,13 @@ function applyControlsToImage(img) {
         });
     });
     
+}
+
+function cleanBoard() {
+    let items = document.querySelectorAll('.item');
+    for (let i = 0; i < items.length; i++) {
+        items[i].remove();
+    }
 }
 
 document.querySelector('#board-name').addEventListener('input', (event) => {

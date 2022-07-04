@@ -30,7 +30,6 @@ body {
 }
 
 .item:hover {
-    /* the translate methode shouldn't be necessary here */
     transform: scale(1.03);
     box-shadow: #000 0 0 12px 5px;
 
@@ -57,6 +56,7 @@ body {
 }
 
 #bin {
+    /* z-index: 9999; */
     position: absolute;
     bottom: 45px; right: 45px;
     width: 70px; height: 70px;
@@ -66,6 +66,10 @@ body {
     text-align: center;
     transition: .15s;
     transform: translate(50%, 50%);
+}
+
+#bin:hover {
+    background-color: #e74444;
 }
 
 #bin img {
